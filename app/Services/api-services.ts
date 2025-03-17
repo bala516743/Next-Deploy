@@ -4,7 +4,7 @@ import axios from 'axios';
 
 //Get all Customers
 export const getCustomersAPI = () => {
-    return axios.get('/api/')
+    return axios.get('/api')
 }
 
 //Create a Customer
