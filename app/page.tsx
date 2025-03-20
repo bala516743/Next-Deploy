@@ -35,38 +35,35 @@ export default function Home() {
   return (
     <>
     <Box sx={{display:'flex', flexDirection:'column', textAlign:'center'}}>
-      <Typography variant="h4" style={{padding:'40px 0px 0px 0px'}}>CUSTOMER LIST</Typography>
-      <Box>
-        <Button sx={{...ButtonStyle, bgcolor:'#EC7FA9', width:'fit-content', m:'10px'}} onClick={handleAdd}>(+) Add Customer</Button>
-      </Box>
+      <Typography variant="h4" style={{padding:'30px 0px 30px 0px'}}>CUSTOMER LIST</Typography>
       <Box sx={{display:'flex', justifyContent:'center'}}>
-        <TableContainer sx={{ borderRadius: "10px", boxShadow:'none', width:'90%', border:'1px solid #D1D1D1' }}>
+        <TableContainer sx={{ borderRadius: "10px", boxShadow:'none', width:'90%', border:'2px solid #D1D1D1' }}>
           <Table>
             <TableHead>
-              <TableRow sx={{ backgroundColor: "#EC7FA9" }}>
-                <TableCell sx={{ borderRight:'1px solid #D1D1D1', textAlign:'center'}}>S.NO</TableCell>
-                <TableCell sx={{ borderRight:'1px solid #D1D1D1', textAlign:'center'}}>Name</TableCell>
-                <TableCell sx={{ borderRight:'1px solid #D1D1D1', textAlign:'center'}}>Age</TableCell>
-                <TableCell sx={{ borderRight:'1px solid #D1D1D1', textAlign:'center'}}>Gender</TableCell>
-                <TableCell sx={{ borderRight:'1px solid #D1D1D1', textAlign:'center'}}>Mobile</TableCell>
-                <TableCell sx={{ borderRight:'1px solid #D1D1D1', textAlign:'center'}}>Gmail</TableCell>
-                <TableCell sx={{ textAlign:'center'}}>Edit/Delete</TableCell>
+              <TableRow sx={{ backgroundColor: "#222831" }}>
+                <TableCell sx={{ borderRight:'2px solid #D1D1D1', textAlign:'center',color:"#fff"}}>S.NO</TableCell>
+                <TableCell sx={{ borderRight:'2px solid #D1D1D1', textAlign:'center',color:"#fff"}}>Name</TableCell>
+                <TableCell sx={{ borderRight:'2px solid #D1D1D1', textAlign:'center',color:"#fff"}}>Age</TableCell>
+                <TableCell sx={{ borderRight:'2px solid #D1D1D1', textAlign:'center',color:"#fff"}}>Gender</TableCell>
+                <TableCell sx={{ borderRight:'2px solid #D1D1D1', textAlign:'center',color:"#fff"}}>Mobile</TableCell>
+                <TableCell sx={{ borderRight:'2px solid #D1D1D1', textAlign:'center',color:"#fff"}}>Gmail</TableCell>
+                <TableCell sx={{ textAlign:'center',color:"#fff"}}>Edit/Delete</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {customers.length > 0 ? (
                 customers.map((item, index) => (
-                  <TableRow key={index} sx={{bgcolor:'white'}}>
-                    <TableCell sx={{ borderRight: '1px solid #e0e0e0', textAlign: 'center' }}>{index + 1}</TableCell>
-                    <TableCell sx={{ borderRight: '1px solid #e0e0e0', textAlign: 'center' }}>{item.name}</TableCell>
-                    <TableCell sx={{ borderRight: '1px solid #e0e0e0', textAlign: 'center' }}>{item.age}</TableCell>
-                    <TableCell sx={{ borderRight: '1px solid #e0e0e0', textAlign: 'center' }}>{item.gender}</TableCell>
-                    <TableCell sx={{ borderRight: '1px solid #e0e0e0', textAlign: 'center' }}>{item.mobile}</TableCell>
-                    <TableCell sx={{ borderRight: '1px solid #e0e0e0', textAlign: 'center' }}>{item.gmail}</TableCell>
+                  <TableRow key={index} sx={{bgcolor:'#D8D9DA'}}>
+                    <TableCell sx={{ borderRight: '2px solid #e0e0e0', textAlign: 'center' }}>{index + 1}</TableCell>
+                    <TableCell sx={{ borderRight: '2px solid #e0e0e0', textAlign: 'center' }}>{item.name}</TableCell>
+                    <TableCell sx={{ borderRight: '2px solid #e0e0e0', textAlign: 'center' }}>{item.age}</TableCell>
+                    <TableCell sx={{ borderRight: '2px solid #e0e0e0', textAlign: 'center' }}>{item.gender}</TableCell>
+                    <TableCell sx={{ borderRight: '2px solid #e0e0e0', textAlign: 'center' }}>{item.mobile}</TableCell>
+                    <TableCell sx={{ borderRight: '2px solid #e0e0e0', textAlign: 'center' }}>{item.gmail}</TableCell>
                     <TableCell sx={{ padding: '8px' }}>
                       <Box sx={{ display: 'flex', justifyContent: 'center', gap:2 }}>
-                        <Button sx={{ ...ButtonStyle, bgcolor: '#7F3A57', width: 'fit-content', padding: '4px' }} onClick={() => handleEdit(item._id)}>Edit</Button>
-                        <Button sx={{ ...ButtonStyle, bgcolor: '#EC7FA9', width: 'fit-content', padding: '4px' }} onClick={() => handleDelete(item._id)}>Delete</Button>
+                        <Button sx={{ ...ButtonStyle, bgcolor: '#0B0B0D', width: 'fit-content', padding: '4px' }} onClick={() => handleEdit(item._id)}>Edit</Button>
+                        <Button sx={{ ...ButtonStyle,color:"black", bgcolor: '#929AAB', width: 'fit-content', padding: '4px' }} onClick={() => handleDelete(item._id)}>Delete</Button>
                       </Box>
                     </TableCell>
                   </TableRow>
