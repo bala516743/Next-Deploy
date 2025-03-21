@@ -1,7 +1,7 @@
 // lib/mongodb.ts
 import { MongoClient } from 'mongodb';
  
-const client = new MongoClient(process.env.MONGODB_URI || 'mongodb://localhost:27017');
+const client = new MongoClient(process.env.MONGODB_URI );
 const dbName = 'NextJS-Customers';  // Replace with your database name
  
 export const connectToDB = async () => {

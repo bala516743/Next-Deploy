@@ -12,7 +12,7 @@ import {
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
+    gmail: '',
     message: '',
   });
 
@@ -29,7 +29,7 @@ export default function Contact() {
     console.log('Submitted Data:', formData);
     // Add logic here to send data to an API or backend
     alert('Message sent successfully!');
-    setFormData({ name: '', email: '', message: '' });
+    setFormData({ name: '', gmail: '', message: '' });
   };
 
   return (
@@ -55,11 +55,11 @@ export default function Contact() {
             required
           />
           <TextField
-            label="Email"
+            label="Gmail"
             variant="outlined"
-            name="email"
-            type="email"
-            value={formData.email}
+            name="gmail"
+            type="gmail"
+            value={formData.gmail}
             onChange={handleChange}
             required
           />

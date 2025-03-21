@@ -5,7 +5,6 @@ import "./globals.css";
 import Header from "./Header/page";
 import { Provider } from "react-redux";
 import { store } from "./Redux/store";
-
 import React from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
@@ -73,7 +72,7 @@ export default function RootLayout({
       left: 0,
       width: '100%',
       height: '100%',
-      backgroundColor: 'rgba(0, 0, 0, 0.4)', // adjust the 0.4 for more/less dimming
+      backgroundColor: 'rgba(0, 0, 0, 0.4)', 
       pointerEvents: 'none',
     }}
   />
@@ -86,6 +85,9 @@ export default function RootLayout({
         zIndex: 1,
       }}
     >
+      <head>
+        <link rel="icon" href="/favicon.ico" /> {/* Add this line */}
+      </head>
       <Header />
       <Provider store={store}>{children}</Provider>
     </div>

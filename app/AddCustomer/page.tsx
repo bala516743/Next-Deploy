@@ -12,13 +12,13 @@ const data = [
   { key: 'age', label: 'Age', placeholder: 'Enter Your Age' },
   { key: 'gender', label: 'Gender', placeholder: 'Enter Your Gender' },
   { key: 'mobile', label: 'Mobile', placeholder: 'Enter Your Mobile' },
-  { key: 'email', label: 'E-mail', placeholder: 'Enter Your Mail' },
+  { key: 'gmail', label: 'E-mail', placeholder: 'Enter Your Mail' },
 ];
 
 export default function AddCustomer()  {
   const router = useRouter();
   const dispatch = useAppDispatch();
-  const [ newCustomer, setNewCustomer ] = useState({ name: '', age: '', gender: '', mobile: '', email: ''});
+  const [ newCustomer, setNewCustomer ] = useState({ name: '', age: '', gender: '', mobile: '', gmail: ''});
    
   const handleChange = (key: string, value: string) => {
     setNewCustomer((prev) => ({ ...prev, [key]: value }));
@@ -34,7 +34,7 @@ export default function AddCustomer()  {
     };
   
     dispatch(createCustomer(formattedCustomer));
-    setNewCustomer({ name: '', age: '', gender: '', mobile: '', email: '' });
+    setNewCustomer({ name: '', age: '', gender: '', mobile: '', gmail: '' });
   };
   
   
