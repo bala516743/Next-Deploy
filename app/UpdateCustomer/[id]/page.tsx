@@ -62,9 +62,9 @@ export default function UpdateCustomer()  {
   }, [customerbyId]);
     
   return (
-    <Box sx={{display:'flex', justifyContent:'center', alignItems:'center',height:'90vh'}}>
-      <Box sx={{display:'flex', flexDirection:'column',p:'20px',justifyContent:'center', gap:'20px', width:'400px', bgcolor:"#FFCFCF", borderRadius:'10px'}}>
-          <Typography variant='h4' sx={{padding:'10px', textAlign:'center'}}>Update Customer</Typography>
+    <Box sx={{display:'flex', justifyContent:'center', alignItems:'center',minHeight:'80vh', color:'black'}}>
+      <Box sx={{display:'flex', flexDirection:'column',p:'20px',justifyContent:'center', gap:'20px', bgcolor:"#E0E0E0", borderRadius:'10px'}}>
+          <Typography variant='h5' sx={{padding:'10px', textAlign:'center', color:'black', fontWeight:600}}>Update Customer</Typography>
           {labelData.map((item, index)=> (
             <Box key={index} style={{display:'flex', gap: item.label === "Age" ? "40px" :"20px", justifyContent:'space-around'}}>
               <Typography variant='h6'>{item.label} :</Typography>
@@ -86,7 +86,7 @@ export default function UpdateCustomer()  {
             ))
           }
           <Box sx={{display:'flex', justifyContent:'center'}}>
-            <Button sx={{...ButtonStyle, bgcolor:'green', width:'fit-content'}} onClick={() => {handleUpdate(customerId)}}>Update</Button>
+            <Button sx={{...ButtonStyle, width:'fit-content', backgroundColor:'#0B0B0D'}} onClick={() => {handleUpdate(customerId)}}>Update</Button>
           </Box>
       </Box>
     </Box>
